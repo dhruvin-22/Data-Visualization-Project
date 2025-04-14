@@ -61,6 +61,7 @@ function drawBarChart(data) {
 
   const width = 800,
     height = 400;
+
   const svg = d3
     .select("#chart-area")
     .append("svg")
@@ -116,6 +117,17 @@ function drawBarChart(data) {
     .style("text-anchor", "end");
 
   svg.append("g").attr("transform", "translate(50, 0)").call(d3.axisLeft(y));
+
+  // Add chart description
+  d3.select("#chart-area")
+    .append("div")
+    .attr("class", "chart-description")
+    .style("text-align", "center")
+    .style("margin", "20px auto")
+    .style("width", "80%")
+    .text(
+      "This bar chart shows the total number of goals scored by each team during the FIFA World Cup 2018."
+    );
 }
 
 function drawPieChart(data) {
@@ -171,6 +183,17 @@ function drawPieChart(data) {
     .attr("font-size", "14px")
     .attr("fill", "white")
     .text((d) => `${d.data.label}: ${d.data.value}`);
+
+  // Add chart description
+  d3.select("#chart-area")
+    .append("div")
+    .attr("class", "chart-description")
+    .style("text-align", "center")
+    .style("margin", "20px auto")
+    .style("width", "80%")
+    .text(
+      "This pie chart illustrates the distribution of match outcomes in the FIFA World Cup 2018 — including wins, draws, and losses."
+    );
 }
 
 function drawLineChart(data) {
@@ -232,6 +255,17 @@ function drawLineChart(data) {
     .attr("stroke", "#3498db")
     .attr("stroke-width", 2)
     .attr("fill", "none");
+
+  // Add chart description
+  d3.select("#chart-area")
+    .append("div")
+    .attr("class", "chart-description")
+    .style("text-align", "center")
+    .style("margin", "20px auto")
+    .style("width", "80%")
+    .text(
+      "This line chart shows the number of matches played each day during the FIFA World Cup 2018, helping visualize the tournament's timeline and activity level."
+    );
 }
 
 function drawBubbleChart(data) {
@@ -330,6 +364,17 @@ function drawBubbleChart(data) {
     .style("color", "white")
     .style("border-radius", "4px")
     .style("pointer-events", "none");
+
+  // Add chart description
+  d3.select("#chart-area")
+    .append("div")
+    .attr("class", "chart-description")
+    .style("text-align", "center")
+    .style("margin", "20px auto")
+    .style("width", "80%")
+    .text(
+      "This bubble chart visualizes the total number of goals scored by each team. The size of the bubble represents the total goals, providing a quick comparison of team performances."
+    );
 }
 
 function drawAreaChart(data) {
@@ -388,6 +433,17 @@ function drawAreaChart(data) {
     .attr("transform", "rotate(-45)");
 
   svg.append("g").attr("transform", `translate(50, 0)`).call(d3.axisLeft(y));
+
+  // Add chart description
+  d3.select("#chart-area")
+    .append("div")
+    .attr("class", "chart-description")
+    .style("text-align", "center")
+    .style("margin", "20px auto")
+    .style("width", "80%")
+    .text(
+      "This area chart represents the total goals scored by each team. The filled area helps to easily compare the magnitude of goals among teams."
+    );
 }
 
 function drawDonutChart(data) {
@@ -455,6 +511,17 @@ function drawDonutChart(data) {
     .style("text-anchor", "middle")
     .style("font-size", "14px")
     .style("fill", "black");
+
+  // Add chart description
+  d3.select("#chart-area")
+    .append("div")
+    .attr("class", "chart-description")
+    .style("text-align", "center")
+    .style("margin", "20px auto")
+    .style("width", "80%")
+    .text(
+      "This donut chart displays the distribution of match outcomes—wins, losses, and draws—based on match results. Each section represents the count of each outcome."
+    );
 }
 
 function drawTreemapChart(data) {
@@ -516,10 +583,20 @@ function drawTreemapChart(data) {
     .style("fill", "white")
     .style("font-size", "12px")
     .text((d) => `${d.data.name}: ${d.data.value}`);
+
+  // Add chart description
+  d3.select("#chart-area")
+    .append("div")
+    .attr("class", "chart-description")
+    .style("text-align", "center")
+    .style("margin", "20px auto")
+    .style("width", "80%")
+    .text(
+      "This treemap chart shows the total number of goals scored by each team. The size of each rectangle reflects the total goals, giving a visual comparison between teams' offensive performances."
+    );
 }
 
 function drawWaterfallChart(data) {
-  // Sample Waterfall data (replace this with actual data as needed)
   const waterfallData = [
     { label: "Start", value: 1000 },
     { label: "Q1", value: 200 },
@@ -612,4 +689,15 @@ function drawWaterfallChart(data) {
     .attr("text-anchor", "middle")
     .style("font-size", "18px")
     .text("Waterfall Chart: Financial Performance");
+
+  // Add chart description
+  d3.select("#chart-area")
+    .append("div")
+    .attr("class", "chart-description")
+    .style("text-align", "center")
+    .style("margin", "20px auto")
+    .style("width", "80%")
+    .text(
+      "This waterfall chart illustrates the financial performance over four quarters. Positive contributions are shown in green, negative ones in red, helping to visualize how each quarter impacts the cumulative total from Start to End."
+    );
 }
