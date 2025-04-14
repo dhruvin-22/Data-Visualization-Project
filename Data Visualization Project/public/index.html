@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FIFA Data Visualization</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <h1>FIFA World Cup 2018 Visualizations</h1>
+    <nav>
+      <button onclick="showChart('barChart')">Bar Chart</button>
+      <button onclick="showChart('pie')">Pie Chart</button>
+      <button onclick="showChart('line')">Line Chart</button>
+      <button onclick="showChart('waterfall')">Waterfall Chart</button>
+      <button onclick="showChart('bubble')">Bubble Chart</button>
+      <button onclick="showChart('donut')">Donut Chart</button>
+      <button onclick="showChart('area')">Area Chart</button>
+      <button onclick="showChart('treemap')">Treemap</button>
+    </nav>
+    <div id="chart-area"></div>
+  </body>
+</html>
