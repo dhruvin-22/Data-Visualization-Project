@@ -1,0 +1,17 @@
+{
+  "name": "fifa_d3_project",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "proxy-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2"
+  }
+}
